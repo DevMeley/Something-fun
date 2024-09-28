@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confession</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        #click-me{
+            padding: 15px 15px;
+            border: 2px solid purple;
+            background-color: rgb(255, 100, 126);
+            border-radius: 10px;
+            box-shadow: 5px 5px 3px purple;
+        }
+        p{
+            font-family: sans-serif;
+            font-size: 20px;
+            color: purple;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <button id="click-me">Click me</button>
+    </div>
+</body>
+<script>
+    const clickMe = document.getElementById('click-me')
+    const wrapper = document.querySelector('.wrapper')
+    clickMe.addEventListener('click', event =>{
+        clickMe.style.display = 'none'
+    })
+    clickMe.addEventListener('click', event =>{
+        const p = document.createElement('p')
+        p.textContent = `Dear Balogun Habeeblahi Opeyemi Akanji, Congratulation on finishing your finals 🎊 🎊 🎊. \n I love you always and Forever.`
+        wrapper.append(p)
+    })
+    
+</script>
+</html>
